@@ -53,6 +53,7 @@ const (
 	Nvidia
 	Amd
 	Netint
+	VideoToolbox
 )
 
 var AccelerationNameLookup = map[Acceleration]string{
@@ -60,7 +61,7 @@ var AccelerationNameLookup = map[Acceleration]string{
 	Nvidia:   "Nvidia",
 	Amd:      "Amd",
 	Netint:   "Netint",
-	VideoToolbox:	"VideoToolbox"
+	VideoToolbox:	"VideoToolbox",
 }
 
 var FfEncoderLookup = map[Acceleration]map[VideoCodec]string{
@@ -81,7 +82,7 @@ var FfEncoderLookup = map[Acceleration]map[VideoCodec]string{
 	VideoToolbox: {
 		H264: "h264_videotoolbox",
 		H265: "hevc_videotoolbox",
-	}
+	},
 }
 
 type ComponentOptions struct {
