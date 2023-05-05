@@ -60,6 +60,7 @@ var AccelerationNameLookup = map[Acceleration]string{
 	Nvidia:   "Nvidia",
 	Amd:      "Amd",
 	Netint:   "Netint",
+	VideoToolbox:	"VideoToolbox"
 }
 
 var FfEncoderLookup = map[Acceleration]map[VideoCodec]string{
@@ -77,6 +78,10 @@ var FfEncoderLookup = map[Acceleration]map[VideoCodec]string{
 		H264: "h264_ni_enc",
 		H265: "h265_ni_enc",
 	},
+	VideoToolbox: {
+		H264: "h264_videotoolbox",
+		H265: "hevc_videotoolbox",
+	}
 }
 
 type ComponentOptions struct {
